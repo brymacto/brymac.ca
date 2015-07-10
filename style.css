@@ -6,7 +6,9 @@ body {
   line-height: 1.25; }
 
 p {
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  margin-left: 0.5em;
+  margin-right: 0.5em; }
 
 a {
   color: #0184CD;
@@ -15,21 +17,42 @@ a {
     text-decoration: underline; }
 
 div.wrapper {
-  max-width: 1140px;
+  max-width: 950px;
   margin: 0 auto;
-  padding-left: 1.5%;
-  padding-right: 1.5%; }
+  padding-top: 1em;
+  padding-left: 3%;
+  padding-right: 3%;
+  min-width: 290px; }
 
 header {
   margin: 50px auto 25px auto; }
 
 img.portrait {
   float: right;
-  width: 250px;
-  height: 250px;
-  border-radius: 125px;
-  -webkit-border-radius: 125px;
-  -moz-border-radius: 125px; }
+  width: 226px;
+  height: 226px;
+  -webkit-border-radius: 113px;
+  -moz-border-radius: 113px;
+  -ms-border-radius: 113px;
+  border-radius: 113px;
+  margin-left: 1em;
+  margin-top: 2.5em; }
+  @media (max-width: 550px) {
+    img.portrait {
+      width: 140px;
+      height: 140px;
+      -webkit-border-radius: 70px;
+      -moz-border-radius: 70px;
+      -ms-border-radius: 70px;
+      border-radius: 70px; } }
+  @media (min-width: 551px) and (max-width: 700px) {
+    img.portrait {
+      width: 180px;
+      height: 180px;
+      -webkit-border-radius: 90px;
+      -moz-border-radius: 90px;
+      -ms-border-radius: 90px;
+      border-radius: 90px; } }
 
 h1 {
   color: #FC635B;
@@ -37,6 +60,12 @@ h1 {
   font-weight: 100;
   font-size: 5em;
   margin-bottom: 0px; }
+  @media (max-width: 550px) {
+    h1 {
+      font-size: 2.5em; } }
+  @media (min-width: 551px) and (max-width: 700px) {
+    h1 {
+      font-size: 3.5em; } }
 
 h2 {
   font-size: 1.5em;
@@ -55,24 +84,27 @@ h4 {
   font-weight: bold;
   font-size: 1.1em; }
 
-.icon {
-  color: #023373;
-  font-size: 3em;
-  display: block; }
-  .icon i {
-    margin-right: 0.5em; }
-
-.icon2 {
+a.icon {
   color: #fff;
   background-color: #0184CD;
-  font-size: 3em;
+  font-size: 2em;
   display: inline-block;
-  padding: 0.25em;
+  padding: 0.25em 0.5em;
   margin: 0.25em; }
-  .icon2 a {
+  a.icon:hover {
     text-decoration: none;
-    color: inherit; }
-  .icon2 i {
-    margin-right: 0.5em; }
+    background-color: #023373; }
+  a.icon i {
+    margin-right: 0.25em; }
+  @media (max-width: 550px) {
+    a.icon {
+      display: block;
+      font-size: 1.5em;
+      margin: 0.5em 0.25em; } }
+
+@media (max-width: 550px) {
+  div.mobile_clear {
+    clear: both;
+    margin-bottom: 1em; } }
 
 /*# sourceMappingURL=style.css.map */

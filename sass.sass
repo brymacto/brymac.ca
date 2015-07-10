@@ -4,12 +4,22 @@ $c_blue_2: #023373
 $c_red: #FC635B
 $c_white: #fff
 
-$w_full: 1140px
+$w_full: 950px
 
 $m_center: 0 auto
 
 $f_sans: 'Open Sans', sans-serif
 $f_source: 'Source Sans Pro',sans-serif
+
+$mq_1: 320px
+$mq_2: 550px
+$mq_3: 700px
+
+=border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius:    $radius
+  -ms-border-radius:     $radius
+  border-radius:         $radius
 
 body
   background-color: $c_bg
@@ -20,6 +30,8 @@ body
 
 p
   margin-bottom: 1em
+  margin-left: 0.5em
+  margin-right: 0.5em
 
 a
   color: $c_blue
@@ -30,19 +42,29 @@ a
 div.wrapper
   max-width: $w_full
   margin: $m_center
-  padding-left: 1.5%
-  padding-right: 1.5%
+  padding-top: 1em
+  padding-left: 3%
+  padding-right: 3%
+  min-width: 290px
 
 header
   margin: 50px auto 25px auto
 
 img.portrait
   float: right
-  width: 250px
-  height: 250px
-  border-radius: 125px
-  -webkit-border-radius: 125px
-  -moz-border-radius: 125px
+  width: 226px
+  height: 226px
+  +border-radius(113px)
+  margin-left: 1em
+  margin-top: 2.5em
+  @media (max-width: $mq_2)
+    width: 140px
+    height: 140px
+    +border-radius(70px)
+  @media (min-width: ($mq_2 + 1)) and (max-width: $mq_3)
+    width: 180px
+    height: 180px
+    +border-radius(90px)
 
 h1
   color: $c_red
@@ -50,6 +72,11 @@ h1
   font-weight: 100
   font-size: 5em
   margin-bottom: 0px
+  @media (max-width: $mq_2)
+    font-size: 2.5em
+  @media (min-width: ($mq_2 + 1)) and (max-width: $mq_3)
+    font-size: 3.5em
+
 
 h2
   font-size: 1.5em
@@ -68,23 +95,25 @@ h4
   font-weight: bold
   font-size: 1.1em
 
-.icon
-  color: $c_blue_2
-  font-size: 3em
-  display: block
-  i
-    margin-right: 0.5em
-
-.icon2
+a.icon
   color: $c_white
   background-color: $c_blue
-  font-size: 3em
+  font-size: 2em
   display: inline-block
-  padding: 0.25em
+  padding: 0.25em 0.5em
   margin: 0.25em
-  a
+  &:hover
     text-decoration: none
-    color: inherit
+    background-color: $c_blue_2
   i
-    margin-right: 0.5em
+    margin-right: 0.25em
+  @media (max-width: $mq_2)
+    display: block
+    font-size: 1.5em
+    margin: 0.5em 0.25em
+
+div.mobile_clear
+  @media (max-width: $mq_2)
+    clear: both
+    margin-bottom: 1em
 
