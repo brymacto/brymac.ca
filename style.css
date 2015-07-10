@@ -22,33 +22,37 @@ div.wrapper {
   padding-top: 1em;
   padding-left: 3%;
   padding-right: 3%;
-  min-width: 290px; }
+  min-width: 290px;
+  position: relative; }
 
 header {
   margin: 50px auto 25px auto; }
 
 img.portrait {
   float: right;
-  width: 226px;
-  height: 226px;
-  -webkit-border-radius: 113px;
-  -moz-border-radius: 113px;
-  -ms-border-radius: 113px;
-  border-radius: 113px;
+  width: 200px;
+  height: 200px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  border-radius: 100px;
   margin-left: 1em;
-  margin-top: 2.5em; }
-  @media (max-width: 550px) {
+  position: relative;
+  top: -40px; }
+  @media only screen and (min-width: 320px) and (max-width: 550px) {
     img.portrait {
-      width: 140px;
-      height: 140px;
+      top: -20px;
+      width: 100px;
+      height: 100px;
       margin-top: 1em;
       margin-bottom: 1em;
-      -webkit-border-radius: 70px;
-      -moz-border-radius: 70px;
-      -ms-border-radius: 70px;
-      border-radius: 70px; } }
-  @media (min-width: 551px) and (max-width: 700px) {
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      -ms-border-radius: 50px;
+      border-radius: 50px; } }
+  @media (min-width: 551px) and (max-width: 725px) {
     img.portrait {
+      top: -20px;
       width: 180px;
       height: 180px;
       -webkit-border-radius: 90px;
@@ -62,10 +66,10 @@ h1 {
   font-weight: 100;
   font-size: 5em;
   margin-bottom: 0px; }
-  @media (max-width: 550px) {
+  @media only screen and (min-width: 320px) and (max-width: 550px) {
     h1 {
-      font-size: 2.5em; } }
-  @media (min-width: 551px) and (max-width: 700px) {
+      font-size: 2.25em; } }
+  @media (min-width: 551px) and (max-width: 725px) {
     h1 {
       font-size: 3.5em; } }
 
@@ -98,16 +102,16 @@ a.icon {
     background-color: #023373; }
   a.icon i {
     margin-right: 0.25em; }
-  @media (max-width: 550px) {
+  @media only screen and (min-width: 320px) and (max-width: 550px) {
     a.icon {
       display: block;
       font-size: 1.5em;
       margin: 0.5em 0.25em; } }
-  @media (min-width: 551px) and (max-width: 700px) {
+  @media (min-width: 551px) and (max-width: 725px) {
     a.icon {
       font-size: 1.75em; } }
 
-@media (max-width: 550px) {
+@media only screen and (min-width: 320px) and (max-width: 550px) {
   div.mobile_clear {
     clear: both;
     margin-bottom: 1em; } }
